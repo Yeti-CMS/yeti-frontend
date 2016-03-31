@@ -1,6 +1,8 @@
+/*global Core*/
 var Yeti = window.Yeti = new Core();
 
 var blacklistedSelectors = '.yeti *, .yeti-ignore, .yeti-ignore *, #yetiContextMenu, #yetiContextMenu p, #yetiLeftMenu *, #yetiPalette *, .yeti-not-editable, .yeti-not-editable *, .instafeed *';
+Yeti.registerGlobal('blacklistedSelectors', blacklistedSelectors);
 
 /**
  * Base Editor Module
@@ -47,7 +49,6 @@ var editorModule = {
                 self.debounce();
 
                 if (self.selectorAction === "append") {
-                    // $(self.contextMenu).append(self.bindToEvent(this, self));
                     $(self.contextMenu).append(self.generateButton(this, self));
                 }
 
@@ -68,7 +69,6 @@ var editorModule = {
         // Displays the context menu near the mouse pointer
         var xOffset = event.clientX;
         var yOffset = event.clientY;
-        // console.log(event);
 
         // Prevent context menu from being rendered too close to the right edge of the window
         if (xOffset > $(window).width() - 160)
@@ -166,6 +166,9 @@ function executeTeardownQueue () {
 
 Yeti.registerGlobal('initializationQueue', []);
 Yeti.registerGlobal('teardownQueue', []);
+Yeti.registerGlobal('registerModule', registerModule);
+Yeti.registerGlobal('executeInitializationQueue', executeInitializationQueue);
+Yeti.registerGlobal('executeTeardownQueue', executeTeardownQueue);
 Yeti.registerGlobal('baseEditorModule', editorModule);
 
 Yeti.registerGlobal('getTagName', function (el) {
@@ -193,21 +196,23 @@ Yeti.registerGlobal('getTagName', function (el) {
     return str;
 });
 
-Yeti.registerGlobal('detectScriptByName', function (name) {
-    var detected = false;
-    $('script').each(function () {
-        var src = $(this).attr('src');
-        if (src && src.indexOf('.mod.js') === -1 && src.indexOf('Yeti') === -1) {
-            if (src.toLowerCase().indexOf(name.toLowerCase()) > -1) detected = true;
-        }
-    });
-    return detected || false;
-});
+// Yeti.registerGlobal('detectScriptByName', function (name) {
+//     var detected = false;
+//     $('script').each(function () {
+//         var src = $(this).attr('src');
+//         if (src && src.indexOf('.mod.js') === -1 && src.indexOf('Yeti') === -1) {
+//             if (src.toLowerCase().indexOf(name.toLowerCase()) > -1) detected = true;
+//         }
+//     });
+//     return detected || false;
+// });
 
 Yeti.initializationQueue.push(function () {
 
+    // Prepend the outline element to the <BODY>
     $('body').prepend('<style id="yetiOutline">.yeti-body-section *:hover, .nav-container *:hover, .footer-container *:hover { box-shadow: inset 0 0 1px rgba(0,0,0,0.65); }</style>');
     
+    // Append the context menu to the <BODY>
     $('body').append('<div id="yetiContextMenu" class="yeti yetiRemoveWhenSaving cleanslate"><div class="yeti-context-menu"></div></div>');
 
     // "Close" the context menu when we don't need it
@@ -218,7 +223,7 @@ Yeti.initializationQueue.push(function () {
         }
     });
 
-    // Underlay
+    // Utility Underlay
     $('body').append('<div class="yetiUnderlay yeti yetiRemoveWhenSaving"></div>');
 
     // Underlay action
@@ -229,12 +234,7 @@ Yeti.initializationQueue.push(function () {
 });
 
 Yeti.teardownQueue.push(function () {
-    // TODO: Reserved for future use
-    // window.onbeforeunload = null;
     $('#yetiContextMenu, #yetiOutline').remove();
-    // $('#yetiOutline, #yetiContextMenu, .yeti, .yetiRemoveWhenSaving, .yetiUnderlay').remove();
-    // $('script[src^="//wsite.io/yeti"]').remove();
-    // $('script[src^="//wsite.io/yeti"]').remove();
     $("*").off("contextmenu");
     $('.yeti-context-menu').hide();
     $('*').off('mousedown');

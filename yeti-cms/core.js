@@ -95,6 +95,8 @@ var Core = (function Core () {
         get: get,
         set: set
     };
+    
+    if (_) obj = $.extend({}, _, obj);
 
     return function () {
         return obj;

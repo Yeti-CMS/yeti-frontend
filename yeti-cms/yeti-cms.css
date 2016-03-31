@@ -845,7 +845,7 @@
   color: #eee !important;
 }
 
-.yeti-left-menu-button i {
+.yeti-left-menu-button i, .yeti-left-menu-button b {
   font-size: 28px !important;
   color: #aaa !important;
 }
@@ -891,6 +891,7 @@
   text-transform: uppercase !important;
   padding-top: 10px !important;
   margin-left: -15px !important;
+  min-width: 100px;
 }
 
 .yeti-align-button-bottom {
@@ -1087,11 +1088,131 @@
 }
 
 
-.yeti-open-sections-list-button, .yeti-open-add-section-button {
+.yeti-hidden {
     display: none !important;
 }
 
 .yeti-context-menu {
     z-index: 999999999999 !important;
     position: fixed !important;
+}
+
+.uploadcare-widget-button {
+    visibility: hidden !important;
+}
+.yetiFavorite-files-image:hover {
+    color: rgba(0,100,200,.5);
+}
+.yetiFormatted-text img {
+    max-width: 100%;
+    height: auto;
+}
+.yetiFavorite-files-image {
+    width: 140px;
+    height: 140px;
+    margin: 10px;
+    padding: 5px;
+    color: rgba(0,0,0,.4);
+    box-shadow: 0 6px 20px -3px;
+    cursor: pointer;
+}
+#yetiUCFavoritesTab {
+    overflow-y: scroll;
+    height: calc(100% - 10px);
+}
+.uploadcare-dialog-tab.uploadcare-dialog-tab-favorites::before, .uploadcare-dialog-tab.uploadcare-dialog-tab-editor::before {
+    display: none;
+}
+i.ucButton {
+    font-size: 32px;
+    margin: 12px 24px;
+    color: #6A6B6B;
+    opacity: 0.5;
+}
+
+i.ucButton.fa-th {
+    margin: 13px 21px;
+}
+i.ucButton:hover {
+    opacity: 0.75;
+}
+i.ucButton:active {
+    opacity: 1;
+}
+#yetiEditImageMenu {
+    position: fixed;
+    display: none;
+    z-index: 999;
+    height: 75%;
+    width: 75%;
+    background: #fff;
+    top: 12.5%;
+    left: 12.5%;
+    padding: 25px;
+    padding-top: 0;
+}
+#yetiEditImageMenu img {
+    height: 25%;
+    max-width: 50%;
+}
+#yetiChangeIconMenu, #yetiChangeElegantIconMenu {
+    position: fixed;
+    display: none;
+    z-index: 999;
+    min-height: 75%;
+    width: 75%;
+    background: #fff;
+    top: 12.5%;
+    left: 12.5%;
+    padding: 25px;
+    padding-top: 0;
+}
+.yeti i.icon {
+    display: inline-block;
+}
+#yetiChangeIconMenu i, #yetiChangeElegantIconMenu i {
+    padding: 5px;
+    font-size: 18px;
+}
+#yetiChangeIconMenu i:hover, #yetiChangeIconMenu i.selected, #yetiChangeElegantIconMenu i:hover, #yetiChangeElegantIconMenu i.selected {
+    color: #fff;
+    background: #222;
+}
+#yetiCheck .underlay, #yetiUnderlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.45;
+}
+#yetiUnderlay {
+    opacity: 0;
+}
+.yetiUnderlay, .underlay {
+    position: fixed;
+    background: #000;
+    opacity: 0.32;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
+.yeti-body-section {
+  position: relative;
+}
+.yeti-ism {
+  position: absolute !important;
+  top: 15px !important;
+  right: 50px !important;
+  transition: 200ms all ease-in-out !important;
+  /*display: none !important;*/
+}
+.yeti-body-section:hover {
+  display: block !important;
 }

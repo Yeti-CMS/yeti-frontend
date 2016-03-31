@@ -1,4 +1,7 @@
 (function () {
+    /*global Yeti*/
+    /*global _$*/
+    /*global $*/
 
     Yeti.initializationQueue.push(function () {
         // Normal elements
@@ -40,7 +43,7 @@
         selectorAction: 'prepend',
         button: function () {
             if (!$('#yetiContextMenu [data-type=edit-link]').length && !$('#yetiContextMenu [data-type=create-link]').length)
-                return '<a class="yeti-context-menu-button"><i class="ion-link" style="padding-right:7px !important"></i>Create Link</a>';
+                return '<a class="yeti-context-menu-button create-link"><i class="ion-link" style="padding-right:7px !important"></i>Create Link</a>';
         },
         action: function (event) {
 
@@ -69,7 +72,6 @@
         action: function (event) {
 
             var that = event.data.that;
-
             document.execCommand('strikeThrough', false, null);
 
             _$(that).html($(that).html());
@@ -92,7 +94,6 @@
         action: function (event) {
 
             var that = event.data.that;
-
             document.execCommand('underline', false, null);
 
             _$(that).html($(that).html());
@@ -115,7 +116,6 @@
         action: function (event) {
 
             var that = event.data.that;
-
             document.execCommand('italic', false, null);
 
             _$(that).html($(that).html());
@@ -138,7 +138,6 @@
         action: function (event) {
 
             var that = event.data.that;
-
             document.execCommand('bold', false, null);
 
             _$(that).html($(that).html());
@@ -158,9 +157,6 @@
         var elHTML = $(el).html();
         if (elHTML !== Yeti.get('currentCEValue')) {
 
-            // Send TogetherJS update
-            // Yeti.collaborators.updateHTML('#' + elID, elHTML);
-
             // Update shadowDOM
             _$('#' + elID).html($(el).html());
             
@@ -177,10 +173,11 @@
     // Watch Content Editables (heartbeat)
     setInterval(function () {
         for (var i = 0; i < Yeti.ceWatch.length; i++) {
-            // Update shadowDOM for each element in the watchlist (Because, ctrl-z)
+            // Update shadowDOM for each element in the watchlist (Because, ctrl-z, :)
             _$('#' + Yeti.ceWatch[i]).html($('#' + Yeti.ceWatch[i]).html());
+            
             // Save changes
-            // if (Yeti.get('userID') && Yeti.get('pageToken') && !Yeti.get('isLocked'))
+            // if (!Yeti.get('isLocked'))
             //     Yeti.saveHTML();
         }
     }, 5000);
