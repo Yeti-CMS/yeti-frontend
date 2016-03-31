@@ -4,7 +4,15 @@ Yeti CMS is a Sitebuilder-Style CMS that treats your static site like a simple c
 ## Refactor & Rewrite
 This repository is the rewrite of a previous project, WPCE.
 
-## What makes Yeti CMS Special?
+## What makes Yeti Special?
+- Works with *any* HTML document
+- Powerful drag-and-drop features
+- No templates
+- Server & Backend-agnostic
+- Dynamicly-generated content via a static-site-generator-style syntax
+- Image Editing (via Uploadcare & Pixlr)
+- Dynamic processing of any Icon fonts included in your CSS
+- Automatically determines the structure of your document, to facilitate editing
 
 
 ## Modules Enabled
