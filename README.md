@@ -33,11 +33,12 @@ This repository is the rewrite of a previous project, WPCE. I've done my best to
 - Remove Element
 
 ## Usage
-Include `loader.js` in your `.html` document to enable Yeti. `loader.js` expects the `/yeti-cms/` folder to be at the root of your website.
+Include `loader.js` in your `.html` document to enable Yeti. `loader.js` expects the `/yeti-cms/` folder to be at the root of your website. Your changes will not be saved, because currently no backend is distributed with Yeti CMS. Join or follow the project to see features like this come to Yeti CMS in the future!
 
 ## Todo
 - Documentation of existing code
 - Module creation guide
+- Build an example backend implementation (PHP, NodeJS)
 
 ## Demo
 - <a href="http://kidgodzilla.github.io/yeti-frontend/?yedit&&editing=true" target="_blank">http://kidgodzilla.github.io/yeti-frontend/</a>
