@@ -1,4 +1,6 @@
 (function () {
+    /*global $*/
+    
     $(document).ready(function () {
         function wrapOrphanTextNodes () {
             // var validElementNames = ['YETI-INLINE', 'A', 'DIV', 'P', 'SPAN', 'SCRIPT', 'STYLE', 'STRONG', 'EM', 'SMALL', 'LABEL', 'OPTION'];
@@ -29,4 +31,5 @@
         wrapOrphanTextNodes();
         $('body').append('<div class="yeti-palette yeti-include yeti-hidden" id="yetiPalette" data-source-url="/yeti-cms/content-blocks.html"></div>');
     });
+    
 })();

@@ -1,4 +1,7 @@
 (function () {
+    /*global ShadowDOM*/
+    /*global $*/
+    
     /**
      * Handle includes
      */

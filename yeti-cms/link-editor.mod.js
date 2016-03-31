@@ -1,4 +1,8 @@
 (function () {
+    /*global Yeti*/
+    /*global _$*/
+    /*global $*/
+    
     /**
      * Link Editor Module
      */

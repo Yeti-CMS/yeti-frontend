@@ -1,4 +1,8 @@
 (function () {
+    /*global Yeti*/
+    /*global vex*/
+    /*global _$*/
+    /*global $*/
 
     $(document).ready(function () {
         $("a[href^='#']").each(function () {
@@ -61,4 +65,5 @@
             });
         }
     });
+    
 })();

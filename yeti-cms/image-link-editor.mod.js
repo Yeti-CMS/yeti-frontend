@@ -1,4 +1,7 @@
 (function () {
+    /*global Yeti*/
+    /*global _$*/
+    /*global $*/
 
     // Add .is-image-link to a[href]-s containing images
     $(document).ready(function () {

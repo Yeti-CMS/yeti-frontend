@@ -19,6 +19,10 @@
                         });
                 }
             });
+            
+        $(window).keyup(function () {
+            Yeti.ceUpdate(document.activeElement);
+        });
 
         // Childless DIVs
         $('div').not('.yeti *, #yetiContextMenu, #yetiContextMenu *, #yetiLeftMenu, #yetiLeftMenu *, .uploadcare-widget *').each(function () {
@@ -171,15 +175,16 @@
     });
 
     // Watch Content Editables (heartbeat)
-    setInterval(function () {
-        for (var i = 0; i < Yeti.ceWatch.length; i++) {
-            // Update shadowDOM for each element in the watchlist (Because, ctrl-z, :)
-            _$('#' + Yeti.ceWatch[i]).html($('#' + Yeti.ceWatch[i]).html());
+    // Todo: Obsolete
+    // setInterval(function () {
+    //     for (var i = 0; i < Yeti.ceWatch.length; i++) {
+    //         // Update shadowDOM for each element in the watchlist (Because, ctrl-z, :)
+    //         _$('#' + Yeti.ceWatch[i]).html($('#' + Yeti.ceWatch[i]).html());
             
-            // Save changes
-            // if (!Yeti.get('isLocked'))
-            //     Yeti.saveHTML();
-        }
-    }, 5000);
+    //         // Save changes
+    //         // if (!Yeti.get('isLocked'))
+    //         //     Yeti.saveHTML();
+    //     }
+    // }, 5000);
 
 })();

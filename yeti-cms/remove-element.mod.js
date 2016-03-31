@@ -1,4 +1,8 @@
 (function () {
+    /*global Yeti*/
+    /*global _$*/
+    /*global $*/
+    
     /**
      * REMOVE MODULE
      *
@@ -20,4 +24,5 @@
             Yeti.collaborators.removeElement('#' + elID);
         }
     });
+    
 })();

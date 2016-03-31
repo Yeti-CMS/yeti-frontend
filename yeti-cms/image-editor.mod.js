@@ -1,4 +1,8 @@
 (function () {
+    /*global uploadcare*/
+    /*global Yeti*/
+    /*global _$*/
+    /*global $*/
 
     Yeti.initializationQueue.push(function () {
         // Add a class for all elements with a css background image

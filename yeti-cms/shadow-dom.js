@@ -1,4 +1,8 @@
 (function () {
+    /*global Core*/
+    /*global _$*/
+    /*global $*/
+    
     var ShadowDOM = window.ShadowDOM = new Core();
     
     if (!$) return;

@@ -1,4 +1,8 @@
 (function () {
+    /*global Yeti*/
+    /*global _$*/
+    /*global $*/
+    
     /**
      * PARALLAX BACKGROUND IMAGE MODULE
      *
@@ -10,7 +14,6 @@
         isModuleRequired: true,
         button: function (that) {
             var img = $(that).parent().find('img.background-image').attr('src');
-
             var fqdn = Yeti.returnImageFQDN(img);
 
             if (img && !$('#yetiContextMenu a img[src="' + fqdn + '"]').length)
@@ -38,7 +41,6 @@
             Yeti.set('currentImageBeingEdited', Yeti.returnImageFQDN(img));
             Yeti.set('currentlyEditingImageID', that);
             Yeti.set('currentlyEditingImageType', "img");
-
             Yeti.showEditImageDialog(img, currentImageEditCallback);
 
         }

@@ -1,4 +1,7 @@
 (function () {
+    /*global Yeti*/
+    /*global _$*/
+    /*global $*/
     
     var iconFontClassNames = [];
     

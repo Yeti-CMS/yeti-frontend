@@ -1,9 +1,7 @@
-var headContent = document.getElementsByTagName('head')[0].innerHTML;
-var bodyContent = document.body;
 var loaderName = "wsiteAsyncLoaderComplete";
 
 (function () {
-    
+
     function loadScriptAsync (resource) {
         var sNew = document.createElement("script");
         sNew.async = true;
@@ -13,7 +11,7 @@ var loaderName = "wsiteAsyncLoaderComplete";
     }
 
     function loadScript (resource) {
-        document.write('<script src="' + resource + '" class="wpceScript"></script>');
+        document.write('<script src="' + resource + '" class="yetiScript"></script>');
     }
 
     function loadStylesheet (resource) {
@@ -42,14 +40,13 @@ var loaderName = "wsiteAsyncLoaderComplete";
         loadStylesheet("/yeti-cms/vex-theme-default.css");
         loadStylesheet("https://cdnjs.cloudflare.com/ajax/libs/messenger/1.4.0/css/messenger.css");
         loadStylesheet("https://cdnjs.cloudflare.com/ajax/libs/messenger/1.4.0/css/messenger-theme-air.css");
-        loadStylesheet("//wsite.io/assets/minimalist-basic/content.css");
+        // loadStylesheet("http://wsite.io/assets/minimalist-basic/content.css");
         
         document.write('<script class="yeti-script">var UPLOADCARE_LOCALE = "en", UPLOADCARE_AUTOSTORE = true, UPLOADCARE_PUBLIC_KEY = "b6170b92061c78b01560";</script>');
     
         // JS Dependencies
         loadScript("https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js");
         loadScript("/yeti-cms/triple-click.js");
-        
         loadScript("/yeti-cms/vex.combined.min.js");
         loadScript("https://cdnjs.cloudflare.com/ajax/libs/messenger/1.4.0/js/messenger.min.js");
         loadScript("https://ucarecdn.com/widget/1.5.5/uploadcare/uploadcare.full.min.js");
@@ -81,12 +78,8 @@ var loaderName = "wsiteAsyncLoaderComplete";
         loadScript("/yeti-cms/clone-element.mod.js");
         loadScript("/yeti-cms/remove-element.mod.js");
         
-        
         // SiteData
-        loadScript("//" + window.location.host + "/sites/" + siteName + "/sitedata.js");
-        
-        
-        
+        loadScript("/sitedata.js");
     }
 
 })();

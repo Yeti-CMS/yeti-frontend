@@ -1,10 +1,12 @@
 (function () {
+    /*global Yeti*/
+    /*global $*/
     
     Yeti.registerGlobal('siteData', {});
     
     $(document).ready(function () {
         Yeti.siteData = {};
-        if (window.WPCESiteData) Yeti.siteData = WPCESiteData;
+        if (window.WPCESiteData) Yeti.siteData = window.WPCESiteData;
         Yeti.collectSiteData();
         Yeti.renderRepeats();
         Yeti.renderTemplates();
@@ -37,10 +39,12 @@
         if (typeof template !== 'string') {
             return template;
         }
+        
         //if view is not a valid object, assume it is an empty object which effectively removes all variable assignments
         if (typeof view !== 'object' || view === null) {
             view = {};
         }
+        
         return template.replace(/\{?\{\{\s*(.*?)\s*\}\}\}?/g, function (match, varName) {
             var value = view[varName];
             try {

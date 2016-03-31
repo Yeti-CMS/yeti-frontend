@@ -1,8 +1,7 @@
-// --------------------------------------------------
-// TRIPLE-CLICK HANDLER - <rich@richadams.me>
-// --------------------------------------------------
-;
 (function($) {
+    /*global jQuery*/
+    /*global jQuery*/
+    
     // Default options
     var defaults = {
         threshold: 1000 // ms
@@ -59,4 +58,5 @@
             $(this).unbind("touchstart click.triple", data, tripleHandler);
         }
     };
+    
 })(jQuery);
