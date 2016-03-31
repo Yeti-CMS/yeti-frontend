@@ -4,6 +4,10 @@ Yeti CMS is a Sitebuilder-Style CMS that treats your static site like a simple c
 ## Refactor & Rewrite
 This repository is the rewrite of a previous project, WPCE.
 
+## Todo
+- Save HTML & Publish HTML Hooks
+- Example Backend
+
 ## Modules Enabled
 - Editor Base (Required)
 - Async HTML Includes (Recommended)
