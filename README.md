@@ -36,7 +36,8 @@ This repository is the rewrite of a previous project, WPCE.
 Include `loader.js` in your `.html` document to enable Yeti. `loader.js` expects the `/yeti-cms/` folder to be at the root of your website.
 
 ## Todo
-- Documentation
+- Documentation of existing code
+- Module creation guide
 
 ## Demo
 - <a href="http://kidgodzilla.github.io/yeti-frontend/?yedit&&editing=true" target="_blank">http://kidgodzilla.github.io/yeti-frontend/</a>
