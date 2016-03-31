@@ -45,6 +45,7 @@ Include `loader.js` in your `.html` document to enable Yeti. `loader.js` expects
 ## License
 For now, Yeti CMS is under a Creative Commons license. A less-restrictive license will be considered in the future, as the project matures.
 
+*Yeti images and example template on `gh-pages` branch are copyright by their respective authors and used under license. These contents are not subject to the above license and should not be reused or re-distributed without permission.*
+
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
 
-*Yeti images and example template on `gh-pages` branch are copyright by their respective authors and used under license. These contents are not subject to the above license and should not be reused or re-distributed without permission.*
