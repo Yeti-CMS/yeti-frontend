@@ -250,20 +250,5 @@
             }, 500);
         }, 5000);
     });
-    
-    // Example implementation of a saveHTML method
-    Yeti.registerGlobal('saveHTML', function () {
-        $('#yetiPublishButton').addClass('yeti-hidden');
-        
-        var pageData = ShadowDOM.shadowDOM.main.clone().off();
-        pageData.find('#yetiUnlockBuilder, .yeti, .yetiRemoveWhenSaving, script[src="/yeti-cms/loader.js"], script[src^="/yeti-cms/"]').remove();
-        pageData = pageData.html();
-        
-        $.post('/write-file.php', { data: pageData, path: window.location.href }, function() {
-            Messenger().post("Page Published!");
-        });
-        
-        $.post('/write-file.php', { data: "var YetiSiteData = " + JSON.stringify(Yeti.siteData), path: '/sitedata.js' });
-    });
         
 })();
