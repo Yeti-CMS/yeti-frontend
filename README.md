@@ -7,6 +7,7 @@ This repository is the rewrite of a previous project, WPCE.
 ## Todo
 - Save HTML & Publish HTML Hooks
 - Example Backend
+- Documentation
 
 ## Modules Enabled
 - Editor Base (Required)
