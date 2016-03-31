@@ -24,7 +24,7 @@ This repository is the rewrite of a previous project, WPCE.
 - Remove Element
 
 ## Usage
-Include loader.js in your .HTML document to enable Yeti. `loader.js` expects the `/yeti-cms/` folder to be at the root of your website.
+Include `loader.js` in your `.html` document to enable Yeti. `loader.js` expects the `/yeti-cms/` folder to be at the root of your website.
 
 ## Demo
 http://yeti.metabootstrap.com/ascend/
