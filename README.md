@@ -3,6 +3,10 @@ Yeti CMS is a Sitebuilder-Style CMS that treats your static site like a simple c
 
 <img style="-webkit-user-select: none; cursor: zoom-in;" src="http://g.recordit.co/iN2JalXJRs.gif">
 
+## Requirements
+- A Modern Web Browser (Should work on Chrome / Firefox / Safari / IE > 9, Edge)
+- Some kind of backend for persistence (DIY or use our example. More to come!)
+
 ## Refactor & Rewrite
 This repository is the rewrite of a previous project, WPCE. I've done my best to clean-up the codebase and only include features that work. Hopefully it will grow into something better, with community support. If the project interests you, please reach out and let me know!
 
