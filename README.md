@@ -29,7 +29,7 @@ Include `loader.js` in your `.html` document to enable Yeti. `loader.js` expects
 - Documentation
 
 ## Demo
-- http://kidgodzilla.github.io/yeti-frontend/?yedit&&editing=true
+- <a href="http://kidgodzilla.github.io/yeti-frontend/?yedit&&editing=true">http://kidgodzilla.github.io/yeti-frontend/</a>
 
 ## License
 For now, Yeti CMS is under a Creative Commons license. A less-restrictive license will be considered in the future, as the project matures.
