@@ -4,8 +4,8 @@ Yeti CMS is a Sitebuilder-Style CMS that treats your static site like a simple c
 ## Refactor & Rewrite
 This repository is the rewrite of a previous project, WPCE.
 
-## Todo
-- Documentation
+## What makes Yeti CMS Special?
+
 
 ## Modules Enabled
 - Editor Base (Required)
@@ -25,6 +25,13 @@ This repository is the rewrite of a previous project, WPCE.
 ## Usage
 Include `loader.js` in your `.html` document to enable Yeti. `loader.js` expects the `/yeti-cms/` folder to be at the root of your website.
 
-## Demos
-- http://yeti.metabootstrap.com/ascend/?yedit
-- http://yeti.metabootstrap.com/featurekit/?yedit
+## Todo
+- Documentation
+
+## Demo
+- http://kidgodzilla.github.io/yeti-frontend/?yedit&&editing=true
+
+## License
+For now, Yeti CMS is under a Creative Commons license. A less-restrictive license will be considered in the future, as the project matures.
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">Yeti CMS</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.jamesfuthey.com" property="cc:attributionName" rel="cc:attributionURL">James Futhey</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
