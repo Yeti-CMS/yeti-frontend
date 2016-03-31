@@ -1,4 +1,5 @@
 # Yeti CMS
+<img src="http://kidgodzilla.github.io/yeti-frontend/yeti-mascot-smile.png" style="width: 320px;margin-top: -250px;-webkit-transform: rotate(5deg);transform: rotate(5deg);">
 Yeti CMS is a Sitebuilder-Style CMS that treats your static site like a simple collection of HTML documents that you can edit.
 
 ## Refactor & Rewrite
