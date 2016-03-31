@@ -1,0 +1,1097 @@
+/*!
+* CleanSlate
+*   github.com/premasagar/cleanslate
+*
+*/
+
+
+/*
+    An extreme CSS reset stylesheet, for normalising the styling of a container element and its children.
+
+    by Premasagar Rose
+        dharmafly.com
+
+    license
+        opensource.org/licenses/mit-license.php
+
+    **
+        
+    v0.9.3
+        
+*/
+
+
+/* == BLANKET RESET RULES == */
+
+
+/* HTML 4.01 */
+
+.cleanslate,
+.cleanslate h1,
+.cleanslate h2,
+.cleanslate h3,
+.cleanslate h4,
+.cleanslate h5,
+.cleanslate h6,
+.cleanslate p,
+.cleanslate td,
+.cleanslate dl,
+.cleanslate tr,
+.cleanslate dt,
+.cleanslate ol,
+.cleanslate form,
+.cleanslate select,
+.cleanslate option,
+.cleanslate pre,
+.cleanslate div,
+.cleanslate table,
+.cleanslate th,
+.cleanslate tbody,
+.cleanslate tfoot,
+.cleanslate caption,
+.cleanslate thead,
+.cleanslate ul,
+.cleanslate li,
+.cleanslate address,
+.cleanslate blockquote,
+.cleanslate dd,
+.cleanslate fieldset,
+.cleanslate li,
+.cleanslate iframe,
+.cleanslate strong,
+.cleanslate legend,
+.cleanslate em,
+.cleanslate summary,
+.cleanslate cite,
+.cleanslate span,
+.cleanslate input,
+.cleanslate sup,
+.cleanslate label,
+.cleanslate dfn,
+.cleanslate object,
+.cleanslate big,
+.cleanslate q,
+.cleanslate samp,
+.cleanslate acronym,
+.cleanslate small,
+.cleanslate img,
+.cleanslate strike,
+.cleanslate code,
+.cleanslate sub,
+.cleanslate ins,
+.cleanslate textarea,
+.cleanslate button,
+.cleanslate var,
+.cleanslate a,
+.cleanslate abbr,
+.cleanslate applet,
+.cleanslate del,
+.cleanslate kbd,
+.cleanslate tt,
+.cleanslate b,
+.cleanslate i,
+.cleanslate hr,
+
+/* HTML5 - Sept 2013 taken from MDN https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/HTML5_element_list */
+
+.cleanslate article,
+.cleanslate aside,
+.cleanslate figure,
+.cleanslate figcaption,
+.cleanslate footer,
+.cleanslate header,
+.cleanslate menu,
+.cleanslate nav,
+.cleanslate section,
+.cleanslate time,
+.cleanslate mark,
+.cleanslate audio,
+.cleanslate video,
+.cleanslate abbr,
+.cleanslate address,
+.cleanslate area,
+.cleanslate blockquote,
+.cleanslate canvas,
+.cleanslate caption,
+.cleanslate cite,
+.cleanslate code,
+.cleanslate colgroup,
+.cleanslate col,
+.cleanslate datalist,
+.cleanslate fieldset,
+.cleanslate main,
+.cleanslate map,
+.cleanslate meta,
+.cleanslate optgroup,
+.cleanslate output,
+.cleanslate progress {
+  background-attachment: scroll;
+  background-color: transparent;
+  background-image: none;
+  /* This rule affects the use of pngfix JavaScript http://dillerdesign.com/experiment/DD_BelatedPNG for IE6, which is used to force the browser to recognise alpha-transparent PNGs files that replace the IE6 lack of PNG transparency. (The rule overrides the VML image that is used to replace the given CSS background-image). If you don't know what that means, then you probably haven't used the pngfix script, and this comment may be ignored :) */
+  background-position: 0 0;
+  background-repeat: repeat;
+  border-color: black;
+  border-color: currentColor;
+  /* `border-color` should match font color. Modern browsers (incl. IE9) allow the use of "currentColor" to match the current font 'color' value <http://www.w3.org/TR/css3-color/#currentcolor>. For older browsers, a default of 'black' is given before this rule. Guideline to support older browsers: if you haven't already declared a border-color for an element, be sure to do so, e.g. when you first declare the border-width. */
+  border-radius: 0;
+  border-style: none;
+  border-width: medium;
+  bottom: auto;
+  clear: none;
+  clip: auto;
+  color: inherit;
+  counter-increment: none;
+  counter-reset: none;
+  cursor: auto;
+  direction: inherit;
+  display: inline;
+  float: none;
+  font-family: inherit;
+  /* As with other inherit values, this needs to be set on the root container element */
+  font-size: inherit;
+  font-style: inherit;
+  font-variant: normal;
+  font-weight: inherit;
+  height: auto;
+  left: auto;
+  letter-spacing: normal;
+  line-height: inherit;
+  list-style-type: inherit;
+  /* Could set list-style-type to none */
+  list-style-position: outside;
+  list-style-image: none;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  min-height: 0;
+  min-width: 0;
+  opacity: 1;
+  outline: invert none medium;
+  overflow: visible;
+  padding: 0;
+  position: static;
+  quotes: "" "";
+  right: auto;
+  table-layout: auto;
+  text-align: inherit;
+  text-decoration: inherit;
+  text-indent: 0;
+  text-transform: none;
+  top: auto;
+  unicode-bidi: normal;
+  vertical-align: baseline;
+  visibility: inherit;
+  white-space: normal;
+  width: auto;
+  word-spacing: normal;
+  z-index: auto;
+  /* CSS3 */
+  /* Including all prefixes according to http://caniuse.com/ */
+  /* CSS Animations don't cascade, so don't require resetting */
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto;
+  -moz-background-size: auto;
+  background-size: auto;
+  -webkit-border-image: none;
+  -moz-border-image: none;
+  -o-border-image: none;
+  border-image: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-column-count: auto;
+  -moz-column-count: auto;
+  column-count: auto;
+  -webkit-column-gap: normal;
+  -moz-column-gap: normal;
+  column-gap: normal;
+  -webkit-column-rule: medium none black;
+  -moz-column-rule: medium none black;
+  column-rule: medium none black;
+  -webkit-column-span: 1;
+  -moz-column-span: 1;
+  /* doesn't exist yet but probably will */
+  column-span: 1;
+  -webkit-column-width: auto;
+  -moz-column-width: auto;
+  column-width: auto;
+  font-feature-settings: normal;
+  overflow-x: visible;
+  overflow-y: visible;
+  -webkit-hyphens: manual;
+  -moz-hyphens: manual;
+  hyphens: manual;
+  -webkit-perspective: none;
+  -moz-perspective: none;
+  -ms-perspective: none;
+  -o-perspective: none;
+  perspective: none;
+  -webkit-perspective-origin: 50% 50%;
+  -moz-perspective-origin: 50% 50%;
+  -ms-perspective-origin: 50% 50%;
+  -o-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
+  -webkit-backface-visibility: visible;
+  -moz-backface-visibility: visible;
+  -ms-backface-visibility: visible;
+  -o-backface-visibility: visible;
+  backface-visibility: visible;
+  text-shadow: none;
+  -webkit-transition: all 0s ease 0s;
+  transition: all 0s ease 0s;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transform-style: flat;
+  -moz-transform-style: flat;
+  -ms-transform-style: flat;
+  -o-transform-style: flat;
+  transform-style: flat;
+  word-break: normal;
+}
+
+
+/* == BLOCK-LEVEL == */
+
+
+/* Actually, some of these should be inline-block and other values, but block works fine (TODO: rigorously verify this) */
+
+
+/* HTML 4.01 */
+
+.cleanslate,
+.cleanslate h3,
+.cleanslate h5,
+.cleanslate p,
+.cleanslate h1,
+.cleanslate dl,
+.cleanslate dt,
+.cleanslate h6,
+.cleanslate ol,
+.cleanslate form,
+.cleanslate option,
+.cleanslate pre,
+.cleanslate div,
+.cleanslate h2,
+.cleanslate caption,
+.cleanslate h4,
+.cleanslate ul,
+.cleanslate address,
+.cleanslate blockquote,
+.cleanslate dd,
+.cleanslate fieldset,
+.cleanslate hr,
+
+/* HTML5 new elements */
+
+.cleanslate article,
+.cleanslate dialog,
+.cleanslate figure,
+.cleanslate footer,
+.cleanslate header,
+.cleanslate hgroup,
+.cleanslate menu,
+.cleanslate nav,
+.cleanslate section,
+.cleanslate audio,
+.cleanslate video,
+.cleanslate address,
+.cleanslate blockquote,
+.cleanslate colgroup,
+.cleanslate main,
+.cleanslate progress,
+.cleanslate summary {
+  display: block;
+}
+
+.cleanslate h1,
+.cleanslate h2,
+.cleanslate h3,
+.cleanslate h4,
+.cleanslate h5,
+.cleanslate h6 {
+  font-weight: bold;
+}
+
+.cleanslate h1 {
+  font-size: 2em;
+  padding: .67em 0;
+}
+
+.cleanslate h2 {
+  font-size: 1.5em;
+  padding: .83em 0;
+}
+
+.cleanslate h3 {
+  font-size: 1.17em;
+  padding: .83em 0;
+}
+
+.cleanslate h4 {
+  font-size: 1em;
+}
+
+.cleanslate h5 {
+  font-size: .83em;
+}
+
+.cleanslate p {
+  margin: 1em 0;
+}
+
+.cleanslate table {
+  display: table;
+}
+
+.cleanslate thead {
+  display: table-header-group;
+}
+
+.cleanslate tbody {
+  display: table-row-group;
+}
+
+.cleanslate tfoot {
+  display: table-footer-group;
+}
+
+.cleanslate tr {
+  display: table-row;
+}
+
+.cleanslate th,
+.cleanslate td {
+  display: table-cell;
+  padding: 2px;
+}
+
+
+/* == SPECIFIC ELEMENTS == */
+
+
+/* Some of these are browser defaults; some are just useful resets */
+
+.cleanslate ol,
+.cleanslate ul {
+  margin: 1em 0;
+}
+
+.cleanslate ul li,
+.cleanslate ul ul li,
+.cleanslate ul ul ul li,
+.cleanslate ol li,
+.cleanslate ol ol li,
+.cleanslate ol ol ol li,
+.cleanslate ul ol ol li,
+.cleanslate ul ul ol li,
+.cleanslate ol ul ul li,
+.cleanslate ol ol ul li {
+  list-style-position: inside;
+  margin-top: .08em;
+}
+
+.cleanslate ol ol,
+.cleanslate ol ol ol,
+.cleanslate ul ul,
+.cleanslate ul ul ul,
+.cleanslate ol ul,
+.cleanslate ol ul ul,
+.cleanslate ol ol ul,
+.cleanslate ul ol,
+.cleanslate ul ol ol,
+.cleanslate ul ul ol {
+  padding-left: 40px;
+  margin: 0;
+}
+
+
+/* helper for general navigation */
+
+.cleanslate nav ul,
+.cleanslate nav ol {
+  list-style-type: none;
+}
+
+.cleanslate ul,
+.cleanslate menu {
+  list-style-type: disc;
+}
+
+.cleanslate ol {
+  list-style-type: decimal;
+}
+
+.cleanslate ol ul,
+.cleanslate ul ul,
+.cleanslate menu ul,
+.cleanslate ol menu,
+.cleanslate ul menu,
+.cleanslate menu menu {
+  list-style-type: circle;
+}
+
+.cleanslate ol ol ul,
+.cleanslate ol ul ul,
+.cleanslate ol menu ul,
+.cleanslate ol ol menu,
+.cleanslate ol ul menu,
+.cleanslate ol menu menu,
+.cleanslate ul ol ul,
+.cleanslate ul ul ul,
+.cleanslate ul menu ul,
+.cleanslate ul ol menu,
+.cleanslate ul ul menu,
+.cleanslate ul menu menu,
+.cleanslate menu ol ul,
+.cleanslate menu ul ul,
+.cleanslate menu menu ul,
+.cleanslate menu ol menu,
+.cleanslate menu ul menu,
+.cleanslate menu menu menu {
+  list-style-type: square;
+}
+
+.cleanslate li {
+  display: list-item;
+  /* Fixes IE7 issue with positioning of nested bullets */
+  min-height: auto;
+  min-width: auto;
+  padding-left: 20px;
+  /* replace -webkit-padding-start: 40px; */
+}
+
+.cleanslate strong {
+  font-weight: bold;
+}
+
+.cleanslate em {
+  font-style: italic;
+}
+
+.cleanslate kbd,
+.cleanslate samp,
+.cleanslate code,
+.cleanslate pre {
+  font-family: monospace;
+}
+
+.cleanslate a {
+  color: blue;
+  text-decoration: underline;
+}
+
+.cleanslate a:visited {
+  color: #529;
+}
+
+.cleanslate a,
+.cleanslate a *,
+.cleanslate input[type=submit],
+.cleanslate input[type=radio],
+.cleanslate input[type=checkbox],
+.cleanslate select {
+  cursor: pointer;
+}
+
+.cleanslate button,
+.cleanslate input[type=submit] {
+  text-align: center;
+  padding: 2px 6px 3px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: arial, helvetica, sans-serif;
+  font-size: small;
+  background: white;
+  -webkit-appearance: push-button;
+  color: buttontext;
+  border: 1px #a6a6a6 solid;
+  background: lightgrey;
+  /* Old browsers */
+  background: rgb(255, 255, 255);
+  /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(221, 221, 221, 1) 100%, rgba(209, 209, 209, 1) 100%, rgba(221, 221, 221, 1) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(221, 221, 221, 1)), color-stop(100%, rgba(209, 209, 209, 1)), color-stop(100%, rgba(221, 221, 221, 1)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(221, 221, 221, 1) 100%, rgba(209, 209, 209, 1) 100%, rgba(221, 221, 221, 1) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(221, 221, 221, 1) 100%, rgba(209, 209, 209, 1) 100%, rgba(221, 221, 221, 1) 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(221, 221, 221, 1) 100%, rgba(209, 209, 209, 1) 100%, rgba(221, 221, 221, 1) 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(221, 221, 221, 1) 100%, rgba(209, 209, 209, 1) 100%, rgba(221, 221, 221, 1) 100%);
+  /* W3C */
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd', GradientType=0);
+  /* IE6-9 */
+  -webkit-box-shadow: 1px 1px 0px #eee;
+  -moz-box-shadow: 1px 1px 0px #eee;
+  -o-box-shadow: 1px 1px 0px #eee;
+  box-shadow: 1px 1px 0px #eee;
+  outline: initial;
+}
+
+.cleanslate button {
+  padding: 1px 6px 2px 6px;
+  margin-right: 5px;
+}
+
+.cleanslate input[type=hidden] {
+  display: none;
+}
+
+
+/* restore form defaults */
+
+.cleanslate textarea {
+  -webkit-appearance: textarea;
+  background: white;
+  padding: 2px;
+  margin-left: 4px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  font-size: 11px;
+  font-family: arial, helvetica, sans-serif;
+  line-height: 13px;
+  resize: both;
+}
+
+.cleanslate select,
+.cleanslate textarea,
+.cleanslate input {
+  border: 1px solid #ccc;
+}
+
+.cleanslate select {
+  font-size: 11px;
+  font-family: helvetica, arial, sans-serif;
+  display: inline-block;
+}
+
+.cleanslate textarea:focus,
+.cleanslate input:focus {
+  outline: auto 5px -webkit-focus-ring-color;
+  outline: initial;
+}
+
+.cleanslate input[type=text] {
+  background: white;
+  padding: 1px;
+  font-family: initial;
+  font-size: small;
+}
+
+.cleanslate input[type=checkbox],
+.cleanslate input[type=radio] {
+  border: 1px #2b2b2b solid;
+  border-radius: 4px;
+}
+
+.cleanslate input[type=checkbox],
+.cleanslate input[type=radio] {
+  outline: intial;
+}
+
+.cleanslate input[type=radio] {
+  margin: 2px 2px 3px 2px;
+}
+
+.cleanslate input[type=submit]:active,
+.cleanslate button:active {
+  background: rgb(59, 103, 158);
+  /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(59, 103, 158, 1) 0%, rgba(43, 136, 217, 1) 50%, rgba(32, 124, 202, 1) 51%, rgba(125, 185, 232, 1) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(59, 103, 158, 1)), color-stop(50%, rgba(43, 136, 217, 1)), color-stop(51%, rgba(32, 124, 202, 1)), color-stop(100%, rgba(125, 185, 232, 1)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(59, 103, 158, 1) 0%, rgba(43, 136, 217, 1) 50%, rgba(32, 124, 202, 1) 51%, rgba(125, 185, 232, 1) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(59, 103, 158, 1) 0%, rgba(43, 136, 217, 1) 50%, rgba(32, 124, 202, 1) 51%, rgba(125, 185, 232, 1) 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(59, 103, 158, 1) 0%, rgba(43, 136, 217, 1) 50%, rgba(32, 124, 202, 1) 51%, rgba(125, 185, 232, 1) 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(59, 103, 158, 1) 0%, rgba(43, 136, 217, 1) 50%, rgba(32, 124, 202, 1) 51%, rgba(125, 185, 232, 1) 100%);
+  /* W3C */
+  border-color: #5259b0;
+}
+
+.cleanslate abbr[title],
+.cleanslate acronym[title],
+.cleanslate dfn[title] {
+  cursor: help;
+  border-bottom-width: 1px;
+  border-bottom-style: dotted;
+}
+
+.cleanslate ins {
+  background-color: #ff9;
+  color: black;
+}
+
+.cleanslate del {
+  text-decoration: line-through;
+}
+
+.cleanslate blockquote,
+.cleanslate q {
+  quotes: none;
+  /* HTML5 */
+}
+
+.cleanslate blockquote:before,
+.cleanslate blockquote:after,
+.cleanslate q:before,
+.cleanslate q:after,
+.cleanslate li:before,
+.cleanslate li:after {
+  content: "";
+}
+
+.cleanslate input,
+.cleanslate select {
+  vertical-align: middle;
+}
+
+.cleanslate table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.cleanslate hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+}
+
+.cleanslate *[dir=rtl] {
+  direction: rtl;
+}
+
+.cleanslate mark {
+  background-color: #ff9;
+  color: black;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.cleanslate menu {
+  padding-left: 40px;
+  padding-top: 8px;
+}
+
+
+/* additional helpers */
+
+.cleanslate [hidden],
+.cleanslate template {
+  display: none;
+}
+
+.cleanslate abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+.cleanslate sub,
+.cleanslate sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.cleanslate sup {
+  top: -0.5em;
+}
+
+.cleanslate sub {
+  bottom: -0.25em;
+}
+
+.cleanslate img {
+  border: 0;
+}
+
+.cleanslate figure {
+  margin: 0;
+}
+
+.cleanslate textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+
+/* == ROOT CONTAINER ELEMENT == */
+
+
+/* This contains default values for child elements to inherit  */
+
+.cleanslate {
+  font-size: medium;
+  line-height: 1;
+  direction: ltr;
+  text-align: left;
+  /* for IE, Opera */
+  text-align: start;
+  /* recommended W3C Spec */
+  font-family: "Times New Roman", Times, serif;
+  /* Override this with whatever font-family is required */
+  color: black;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  list-style-type: disc;
+}
+
+.cleanslate pre {
+  white-space: pre;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.yeti-left-nav {
+  font-family: Lato, sans-serif !important;
+}
+
+.yeti-left-nav a {
+  text-decoration: none !important;
+}
+
+.yeti-left-left {
+  position: fixed !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  z-index: 9999999999 !important;
+  background: #2C3136 !important;
+  width: 50px !important;
+}
+
+.yeti-left-menu-button {
+  display: block !important;
+  text-align: center !important;
+  padding: 10px !important;
+  border-bottom: 1px solid #373d44 !important;
+  cursor: pointer !important;
+}
+
+.yeti-left-menu-button:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.yeti-left-menu-button:hover i {
+  color: #eee !important;
+}
+
+.yeti-left-menu-button.yeti-active {
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.yeti-left-menu-button.yeti-active i {
+  color: #eee !important;
+}
+
+.yeti-left-menu-button i {
+  font-size: 28px !important;
+  color: #aaa !important;
+}
+
+.yeti-left-menu-button img {
+  width: 200px !important;
+  margin-left: -15px !important;
+  padding-top: 10px;
+}
+
+.yeti-left-two {
+  width: 250px !important;
+  background: #1C1F22 !important;
+  position: fixed !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: -200px !important;
+  z-index: 999999999 !important;
+  overflow-y: scroll !important;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1) !important;
+}
+
+.yeti-left-two.yeti-open {
+  left: 50px !important;
+}
+
+.yeti-left-two.yeti-two .yeti-left-menu-button, .yeti-left-two.yeti-two .yeti-left-menu-button img, .yeti-left-two.yeti-two .yeti-left-menu-button .yeti-thumbnail-label {
+  cursor: move !important;
+}
+
+.yeti-left-title {
+  color: #999 !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 1px !important;
+  padding: 19px 25px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+}
+
+.yeti-left-menu-button .yeti-text.yeti-thumbnail-label {
+  font-size: 11px !important;
+  text-transform: uppercase !important;
+  padding-top: 10px !important;
+  margin-left: -15px !important;
+}
+
+.yeti-align-button-bottom {
+  position: fixed !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  width: 50px !important;
+}
+
+.yeti-align-left {
+  text-align: left !important;
+}
+
+.yeti-float-right {
+  float: right !important;
+}
+
+.yeti-left-two .yeti-left-menu-button {
+  padding-left: 25px !important;
+}
+
+.yeti-left-two .yeti-text {
+  color: #999 !important;
+  font-size: 14px !important;
+  letter-spacing: 0.75px !important;
+  display: inline-block !important;
+  position: relative !important;
+  top: -5.5px !important;
+  padding-left: 5px !important;
+}
+
+.yeti-left-two .yeti-left-menu-button:hover .yeti-text {
+  color: #ccc !important;
+}
+
+.yeti-trash-icon {
+  display: none !important;
+}
+
+.yeti-left-two .yeti-left-menu-button:hover .yeti-trash-icon {
+  padding-right: 10px !important;
+  display: block !important;
+  font-size: 20px !important;
+  position: relative !important;
+  top: 4px !important;
+}
+
+.yeti .ion-ios-drag {
+  cursor: move !important;
+}
+
+
+
+
+
+.yeti-position-upper-right {
+  position: fixed !important;
+  top: 50px !important;
+  right: 50px !important;
+}
+
+.yeti-position-bottom-right {
+  position: fixed !important;
+  bottom: 50px !important;
+  right: 50px !important;
+}
+
+.yeti-position-center {
+  position: fixed !important;
+  top: 25% !important;
+  left: 42% !important;
+}
+
+.yeti-inline-section-menu {
+}
+.yeti-inline-section-menu-button:first-of-type {
+  border-radius: 3px 0 0 3px !important;
+}
+.yeti-inline-section-menu-button:last-of-type {
+  border-radius: 0 3px 3px 0 !important;
+  padding-right: 10px !important;
+}
+.yeti-inline-section-menu-button {
+  padding: 4px 6px 3px !important;
+  color: #eee !important;
+  background: #00ACD6 !important;
+  text-align: center !important;
+  text-decoration: none !important;
+}
+.yeti-inline-section-menu-button:hover {
+  background: #00B8D6 !important;
+}
+.yeti-inline-section-menu-button i {
+  position: relative !important;
+  left: 2px !important;
+}
+/* .yeti-inline-section-menu-button:last-of-type i {
+  left: 0 !important;
+} */
+/* .yeti-bg-red {
+  background: #F7632E !important;
+}
+.yeti-bg-red:hover {
+  background: #F7442E !important;
+} */
+
+
+.yeti-button {
+  font-family: Lato, sans-serif !important;
+  padding: 9px 16px 9px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.65px !important;
+  font-size: 13px !important;
+  border-radius: 2px !important;
+  color: #f9f9f9 !important;
+  background: #00ACD6 !important;
+  text-align: center !important;
+  text-decoration: none !important;
+}
+.yeti-button:hover {
+  background: #00B8D6 !important;
+}
+
+.yeti-context-menu {
+  width: 180px !important;
+  background: #fcfcfc !important;
+  border-top: 1px solid #f3f3f3 !important;
+  border-left: 1px solid #f3f3f3 !important;
+  border-bottom: 1px solid #f3f3f3 !important;
+  border-right: 1px solid #f3f3f3 !important;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.032) !important;
+  /*min-height: 100px !important;*/
+}
+
+.yeti-context-menu .yeti-context-menu-button {
+  font-family: Lato, sans-serif !important;
+  background: #fafafa !important;
+  color: #555 !important;
+  padding: 10px 16px !important;
+  text-transform: uppercase !important;
+  font-size: 14px !important;
+  display: block !important;
+  letter-spacing: 0.5px !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+}
+.yeti-context-menu-button:hover {
+  background: rgba(0,0,0,0.05) !important;
+  color: #000 !important;
+}
+.yeti-context-menu .yeti-context-menu-button img {
+  max-width: 50px !important;
+  max-height: 25px !important;
+  position: relative !important;
+  margin-top: -10px !important;
+  top: 6px !important;
+  left: 11.5px !important;
+  opacity: 0.75 !important;
+  background: pink !important;
+}
+.yeti-context-menu-button:hover img {
+  opacity: 0.95 !important;
+}
+.yeti-context-menu .yeti-context-menu-button.yeti-quarter-button {
+  display: inline-block !important;
+  padding: 9px 14.75px !important;
+  margin: 0 !important;
+  margin-left: -2px !important;
+  margin-bottom: 10px;
+}
+.yeti-context-menu .yeti-context-menu-button.yeti-quarter-button:first-of-type {
+  margin-left: 0 !important;
+}
+
+.yeti-context-menu .yeti-context-menu-button.yeti-quarter-button i {
+  position: relative !important;
+  left: 4px !important;
+}
+
+.yeti-context-menu-button i {
+  padding-right: 5px !important;
+}
+
+.lnr {
+    font-family: Linearicons-Free !important;
+    speak: none !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    line-height: 1 !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+
+
+.yeti-open-sections-list-button, .yeti-open-add-section-button {
+    display: none !important;
+}
+
+.yeti-context-menu {
+    z-index: 999999999999 !important;
+    position: fixed !important;
+}
