@@ -44,6 +44,9 @@ Include `loader.js` in your `.html` document to enable Yeti. `loader.js` expects
 ## Demo
 <a href="http://yeti-cms.github.io/yeti-frontend/?yedit&editing=true" target="_blank">http://yeti-cms.github.io/yeti-frontend/</a>
 
+## Backend
+An example backend implementation exists, if you would like to try it: https://github.com/Yeti-CMS/Yeti-Simple-Persistence-Layer
+
 ## License
 For now, Yeti CMS is under a Creative Commons license. A less-restrictive license will be considered in the future, as the project matures.
 
