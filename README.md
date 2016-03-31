@@ -27,3 +27,5 @@ Include `loader.js` in your `.html` document to enable Yeti. `loader.js` expects
 
 ## Demo
 http://yeti.metabootstrap.com/ascend/
+
+http://yeti.metabootstrap.com/ascend/
