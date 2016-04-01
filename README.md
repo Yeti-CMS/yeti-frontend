@@ -47,7 +47,7 @@ Include `loader.js` in your `.html` document to enable Yeti. `loader.js` expects
 
 ## Demos
 - <a href="http://yeti-cms.github.io/yeti-frontend/?yedit&editing=true" target="_blank">http://yeti-cms.github.io/yeti-frontend/?yedit</a>
-- Extended demo (Ability to add new sections to the page) <a href="http://yeti.metabootstrap.com/featurekit/?yedit" target="_blank">http://yeti.metabootstrap.com/featurekit/?yedit/</a>
+- Extended demo (Ability to add new sections to the page) <a href="http://yeti.metabootstrap.com/featurekit/?yedit&editing=true" target="_blank">http://yeti.metabootstrap.com/featurekit/?yedit&editing=true/</a>
 
 ## Backend
 An example backend implementation exists, if you would like to try it: https://github.com/Yeti-CMS/Yeti-Simple-Persistence-Layer
