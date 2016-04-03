@@ -49,7 +49,7 @@ Include `loader.js` in your `.html` document to enable Yeti. `loader.js` expects
 http://yeti-cms.github.io/yeti-frontend/?yedit&editing=true
 
 ## Download Distributable
-If you would like to download a ready-to-use CMS, see: 
+If you would like to download a ready-to-use CMS, see: https://github.com/Yeti-CMS/Distributable
 
 ## Backend
 An example backend implementation exists, if you would like to try it: https://github.com/Yeti-CMS/Yeti-Simple-Persistence-Layer
