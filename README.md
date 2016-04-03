@@ -7,6 +7,10 @@ Yeti CMS is a Sitebuilder-Style CMS that treats your static site like a simple c
 - A Modern Web Browser (Should work on Chrome / Firefox / Safari / IE > 9, Edge)
 - Some kind of backend for persistence (DIY or use our example. More to come!)
 
+## Download Distributable
+If you would like to download a ready-to-use CMS, see: https://github.com/Yeti-CMS/Distributable
+
+
 ## Refactor & Rewrite
 This repository is the rewrite of a previous project, WPCE. I've done my best to clean-up the codebase and only include features that work. Hopefully it will grow into something better, with community support. If the project interests you, please reach out and let me know!
 
@@ -38,7 +42,7 @@ This repository is the rewrite of a previous project, WPCE. I've done my best to
 - Remove Element
 
 ## Usage
-Include `loader.js` in your `.html` document to enable Yeti. `loader.js` expects the `/yeti-cms/` folder to be at the root of your website. Your changes will not be saved, because currently no backend is distributed with Yeti CMS. Join or follow the project to see features like this come to Yeti CMS in the future!
+Include `loader.js` in your `.html` document to enable Yeti. `loader.js` expects the `/yeti-cms/` folder to be at the root of your website. Download the `yeti-admin` package or `yeti-distributable` package if you're interested in a complete CMS (with Backend).
 
 ## Todo
 - Documentation of existing code
@@ -47,9 +51,6 @@ Include `loader.js` in your `.html` document to enable Yeti. `loader.js` expects
 
 ## Demos
 http://yeti-cms.github.io/yeti-frontend/?yedit&editing=true
-
-## Download Distributable
-If you would like to download a ready-to-use CMS, see: https://github.com/Yeti-CMS/Distributable
 
 ## Backend
 An example backend implementation exists, if you would like to try it: https://github.com/Yeti-CMS/Yeti-Simple-Persistence-Layer
