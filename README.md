@@ -3,6 +3,8 @@ Yeti CMS is a Sitebuilder-Style CMS that treats your static site like a simple c
 
 ![demo](http://g.recordit.co/iN2JalXJRs.gif "Yeti CMS Demo")
 
+Demo: http://g.recordit.co/iN2JalXJRs.gif
+
 ## Requirements
 - A Modern Web Browser (Should work on Chrome / Firefox / Safari / IE > 9, Edge)
 - Some kind of backend for persistence (DIY or use our example. More to come!)
